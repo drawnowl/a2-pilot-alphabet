@@ -37,13 +37,4 @@ const icaoAlphabet = {
   "90": "Zulu"
 }
 
-const inputValue = '404fd3';
-let inputParsedArray = [...inputValue].filter((index) => index !== ',');
-let result = '';
-
-for (let i = 0; i <= inputParsedArray.length; i++) {
-  let charCode = (inputParsedArray[i] + '').toUpperCase().charCodeAt();
-  result += icaoAlphabet[charCode] + ' ';
-}
-
-console.log(result);
+export { icaoAlphabet };
