@@ -4,10 +4,10 @@ const translateBtn = document.getElementById('translateBtn');
 const inputValue   = document.getElementById('inputValue');
 const resultOutput = document.getElementById('result');
 
-function translate(value) {
-  let inputParsedArray = [...value].filter((index) => index !== ',');
+const regex = new RegExp('\\w');
 
-  console.log(inputParsedArray)
+function translate(value) {
+  let inputParsedArray = [...value].filter(data => data.match(regex));
   let result = '';
 
   for (let i = 0; i < inputParsedArray.length; i++) {
